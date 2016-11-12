@@ -1,0 +1,259 @@
+title = "Wimera | ContactUs"
+url = "/contactus"
+layout = "wimera"
+description = "Contact Us."
+is_hidden = 0
+==
+<?php
+function onSubmit()
+{
+	// Get fields
+	$data = Input::all();
+	$rules = ['name' => 'required|min:3', 'email' => 'required|email', 'messages' => 'required'];
+	$msgs = ['required' => 'This field is required', 'email' => 'Please enter a valid email'];
+	$errorMessages = "";
+
+	$v = Validator::make($data, $rules, $msgs);
+
+	Log::info(var_export($data, true));
+
+	if ($v->fails())
+	{
+		$result = false;
+		$errorMessages = $v->messages();
+	} else {
+		Mail::send('rajesh.email::mail.contactus', $data, function($message) use ($data)
+		{
+			$message->from("fromwebsite@wimerasys.com", post('name'));
+			$message->to('info@wimerasys.com')->subject('Contact Us');
+		});
+
+		$result = true;
+	}
+
+	return [
+        'result' => $result,
+        'message' => $errorMessages
+	];
+}
+?>
+==
+
+<div class="container-fluid" id="read-more">
+	<div id="content">
+
+		<h3>Contact Info</h3>
+
+		<div class="row top-buffer">
+			<div class="col-sm-4">
+
+				<div class="well">
+
+					<p class="lead">
+						<strong>India Office:</strong>
+					</p>
+
+					<p>
+
+							Wimera Systems Pvt Ltd.
+							<br>KRS Infra Business Centre
+							<br>HSR Layout, Bangalore
+							<br>India - 560 102
+
+					</p>
+
+					<p class="lead">
+						<strong>Phone:</strong>
+						<br> +91-99860-73106
+					</p>
+
+					<p>
+						<strong>Email:</strong>
+						<br>
+						<strong>
+								<a href="mailto:info@wimerasys.com?Subject=Hello%20again"  target="_top">info@wimerasys.com</a>
+						</strong>
+					</p>
+
+				</div>
+
+				<div class="well">
+
+					<p class="lead">
+						<strong>Netherlands Office:</strong>
+					</p>
+
+					<p>
+
+							Ir. Arthur P.A. Paanakker
+							<br>General Manager
+							<br>Wimera Nederland
+							<br>
+							<br>Oude Tielseweg 8
+							<br>4116 EA Buren
+							<br>The Netherlands
+
+					</p>
+
+					<p class="lead">
+						<strong>Phone:</strong>
+						<br> +31 6 126 19401
+					</p>
+
+					<p>
+						<strong>Email:</strong>
+						<br>
+						<strong>
+								<a href="mailto:info@wimera.nl?Subject=Hello%20again"  target="_top">info@wimera.nl</a>
+						</strong>
+					</p>
+				</div>
+
+				<!-- <p class="lead">
+					<strong>QR Code:</strong>
+					<br>
+					<img src="assets/qrcode.jpg"/a>
+				</p> -->
+			</div>
+
+
+			<div class="col-sm-8">
+				<div class="well" style="width: 100%; height:743px;">
+					<div id="map_canvas" class="" style="width: 100%; height:100%;"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+	<div class="container">
+		<div class="row ">
+			<div id="successform" style="display: none;">
+				<h2>Congratulations! Mail has sent successfully.</h2>
+			</div>
+
+			<div id="contactform">
+				<h2> Contact Us </h2>
+				<form class="form-horizontal" data-request="onSubmit" data-request-success="formSuccess(data)">
+					<div id="group-name" class="form-group">
+						<label class="control-label col-sm-2" for="name">Name:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+							<span class="help-block"></span>
+						</div>
+					</div>
+					<div id="group-email" class="form-group">
+						<label class="control-label col-sm-2" for="email">E-Mail:</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+							<span class="help-block"></span>
+						</div>
+					</div>
+					<div id="group-message" class="form-group">
+						<label class="control-label col-sm-2" for="messages">Message:</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="5" id="message" name="messages" placeholder="Enter your message"> </textarea>
+							<span class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+<script>
+
+	function formSuccess(data) {
+		console.log(data);
+		if(data.result) {
+			console.log('form posted successfully.');
+			$("#contactform").hide();
+			$('#successform').css('display','block');
+		} else {
+			if(data.message.name) {
+				$("#group-name").addClass('has-error');
+				$("#group-name .help-block").text(data.message.name[0]);
+			} else {
+				$("#group-name").removeClass('has-error');
+				$("#group-name .help-block").text("");
+			}
+
+			if(data.message.email) {
+				$("#group-email").addClass('has-error');
+				$("#group-email .help-block").text(data.message.email[0]);
+			} else {
+				$("#group-email").removeClass('has-error');
+				$("#group-email .help-block").text("");
+			}
+
+			if(data.message.messages) {
+				$("#group-message").addClass('has-error');
+				$("#group-message .help-block").text(data.message.messages[0]);
+			} else {
+				$("#group-message").removeClass('has-error');
+				$("#group-message .help-block").text("");
+			}
+		}
+	}
+
+
+
+	function initialize() {
+		/*var myLatlng = new google.maps.LatLng(12.913979, 77.639285);*/
+		var myLatlng = new google.maps.LatLng(12.914033, 77.639295);
+		var myOptions = {
+			zoom: 18,
+			center: myLatlng,
+			scrollwheel: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+
+		var marker = new google.maps.Marker({
+		    position: myLatlng,
+		    title:"Wimera System Pvt. Ltd.,"
+		});
+
+		marker.setMap(map);
+
+		var contentString = '<div id="content">'+
+		'<div id="siteNotice">'+
+		'</div>'+
+		'<h4 id="firstHeading" class="firstHeading">Wimera Systems Pvt. Ltd.</h4>'+
+		'<div id="bodyContent">'+
+		'<p>KRS Infra Business Centre' +
+		'</br>HSR Layout, Bangalore'+
+		'</br>India â€“ 560 102</p>'+
+		'</div>';
+
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		});
+
+		marker.addListener('click', function() {
+			infowindow.open(map, marker);
+		});
+
+		infowindow.open(map, marker);
+	};
+
+	function loadScript() {
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
+		document.body.appendChild(script);
+	};
+
+	window.onload = loadScript;
+
+</script>
+

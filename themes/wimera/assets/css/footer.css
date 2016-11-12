@@ -1,0 +1,10 @@
+/*** Footer ***/
+#footer li {
+	list-style-type: none;
+}
+
+#footerAddress a {
+	text-decoration: none;
+}
+
+/*** End Footer ***/

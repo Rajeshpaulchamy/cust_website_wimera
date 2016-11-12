@@ -1,0 +1,656 @@
+/*
+ * CONFIGURABLE VARIABLES
+ */
+/*
+ * MOBILE MODE
+ */
+/* SANDWITCH BAR */
+/* FIRST LEVEL MENU */
+/* SECOND LEVEL MENU */
+/*
+ * SCREEN MODE
+ */
+/* FONT SETTINGS */
+/* NAVBAR */
+/* FIRST LEVEL MENU */
+/* SECOND LEVEL MENU */
+/* HAS SUBMENU SYMBOL */
+/*
+ * NAVBAR CUSTOMIZATION CSS
+ */
+header {
+  position: fixed;
+  width: 100%; }
+
+nav {
+  position: relative;
+  /*width: 980px;*/
+  margin: 0 auto; }
+
+/*
+ * LOGO CSS
+ */
+.logo {
+  position: relative;
+  z-index: 123;
+  float: left; }
+
+.logo a img {
+  color: #6DDB07;
+  width: 145px;
+  max-height: 57px;
+  margin-top: -12px; }
+
+.navbar > ul {
+  float: right; }
+
+.navbar,
+.navbar ul,
+.navbar ul li,
+.navbar ul li a,
+.navbar #head-mobile {
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* to bring the distance between two menu options */
+  padding: 0px 3px; }
+
+.navbar:after,
+.navbar > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.navbar #head-mobile {
+  display: none; }
+
+.navbar > ul > li {
+  float: left; }
+
+.navbar > ul > li > a {
+  padding: 17px; }
+
+.navbar > ul > li:hover,
+.navbar ul li.active:hover,
+.navbar ul li.active,
+.navbar ul li.has-sub.active:hover {
+  -webkit-transition: background .3s ease;
+  -ms-transition: background .3s ease;
+  transition: background .3s ease; }
+
+.navbar > ul > li.has-sub > a {
+  padding-right: 30px; }
+
+/***********************************************************************
+ * '+' symbol css customization for the first level menu
+ ***********************************************************************/
+/*
+ * a 'span' with a class 'symbol' will be added at runtime (js) to display
+ * the + symbol for dropdowns
+ */
+.navbar > ul > li.has-sub > span.symbol:after {
+  position: absolute;
+  top: 22px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  content: ''; }
+
+.navbar > ul > li.has-sub > span.symbol:before {
+  position: absolute;
+  top: 19px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  transition: all .25s ease; }
+
+.navbar > ul > li.has-sub:hover > span.symbol:before {
+  top: 23px;
+  height: 0; }
+
+/***********************************************************************
+ * '+' symbol css customization for the second level menu
+ ***********************************************************************/
+.navbar ul ul li.has-sub > span.symbol:after {
+  position: absolute;
+  top: 16px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  content: '';
+  float: right;
+  z-index: 999; }
+
+.navbar ul ul li.has-sub > span.symbol:before {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  transition: all .25s ease;
+  float: right;
+  z-index: 999; }
+
+.navbar ul ul > li.has-sub:hover > span.symbol:before {
+  top: 17px;
+  height: 0; }
+
+/*
+ * Other customization
+ */
+/* added to bring the cursor to pointer type */
+.navbar a {
+  width: 100%; }
+
+.navbar ul ul {
+  position: absolute;
+  left: -9999px; }
+
+.navbar ul ul li {
+  height: 0;
+  -webkit-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  transition: all .25s ease; }
+
+.navbar li:hover > ul {
+  left: auto; }
+
+.navbar li:hover > ul > li {
+  height: 35px; }
+
+/*
+ * positioning the third level ul menu;
+ * when second level ul menu is left aligned
+ * then 'margin-left: 100%' is positioning the third level menu
+ *
+ * when second level ul menu is right aligned
+ * then 'margin-right: 100%' is positioning the third level menu
+ *
+ * i wonder how both the properties working together
+ */
+.navbar ul ul ul {
+  margin-left: 100%;
+  margin-right: 100%;
+  top: 0; }
+
+.navbar ul ul li a {
+  padding: 11px 15px; }
+
+.navbar ul ul li:last-child > a,
+.navbar ul ul li.last-item > a {
+  border-bottom: 0; }
+
+/* added to auto adjust the width of the 'li' based on the content length */
+.navbar ul ul li a {
+  display: inline-block;
+  white-space: nowrap; }
+
+.navbar ul ul ul li a {
+  display: inline-block;
+  white-space: nowrap; }
+
+.navbar ul ul ul li {
+  display: block !important; }
+
+/* added padding to the second level menu option on left and right side */
+.navbar > ul ul li.has-sub > a {
+  padding-left: 20px;
+  padding-right: 30px; }
+
+/* dynamically move ul position from left to right based on screen size */
+.edge > ul {
+  right: 0; }
+
+/*
+ * MENU FONT CUSTOMIZATION CSS
+ */
+.navbar {
+  font-family: "Open Sans", Arial, sans-serif; }
+
+/*
+ * MENU COLOR CUSTOMIZATION CSS
+ */
+header {
+  background: white; }
+
+/* background color for the first level menu in non-active time */
+.navbar {
+  background: white; }
+
+/*****************************************************************
+ * FIRST LEVEL MENU
+ *****************************************************************/
+/* first level menu customization in non-active time */
+.navbar > ul > li > a {
+  /* background color */
+  background: white;
+  /* foreground color */
+  color: #08C;
+  /* font settings */
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: normal;
+  text-decoration: none; }
+
+/* color setting of the hover item for the first level menu */
+.navbar > ul > li:hover > a {
+  /* background color */
+  background: #08C !important;
+  /* foreground color */
+  color: white !important; }
+
+/* color setting of the active item for the first level menu */
+.navbar > ul > li.active > a {
+  /* background color */
+  background: #08C;
+  /* foreground color */
+  color: white; }
+
+/* part of the color of '+' [-] symbol for the option which has submenu */
+.navbar > ul > li.has-sub > span.symbol:after {
+  background: #08C;
+  z-index: 9999;
+  /* otherwise the li tag background color will overwrite the symbol */ }
+
+/* part of the color of '+' [|] symbol for the option which has submenu */
+.navbar > ul > li.has-sub > span.symbol:before {
+  background: #08C;
+  z-index: 9999;
+  /* otherwise the li tag background color will overwrite the symbol */ }
+
+/*****************************************************************
+ * SUBMENU LEVEL MENU
+ *****************************************************************/
+/* submenu level menu customization in non-active time */
+.navbar ul ul li a {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-decoration: none; }
+
+/* foreground color settings for the sub menu in non-active time */
+.navbar ul ul li a {
+  /* foreground color */
+  color: #777; }
+
+/* submenu li tag customization */
+.navbar ul ul li {
+  /* background color */
+  background: white;
+  border-bottom: 1px solid #CCC !important; }
+
+/* added to avoid the duplicate border when li has submenu */
+.navbar ul li:last-child {
+  border-bottom: 0px !important; }
+
+/* background color for the submenu while mouse hover */
+.navbar ul ul li:hover {
+  background: #CCC; }
+
+/* foreground color for the submenu while mouse hover */
+.navbar ul ul li:hover > a {
+  color: #777; }
+
+/* part of the color of '+' [-] symbol for the option which has submenu */
+.navbar ul ul li.has-sub > span.symbol:after {
+  background: #08C; }
+
+/* part of the color of '+' [|] symbol for the option which has submenu */
+.navbar ul ul li.has-sub > span.symbol:before {
+  background: #08C; }
+
+@media screen and (max-width: 719px) {
+  /*
+	 * this class will be added to a span at runtime to display
+	 * the + symbol for dropdowns; same needs
+	 * to be hidden in mobile mode
+	 */
+  .symbol {
+    display: none; }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    text-align: center;
+    float: none; }
+  .logo2 {
+    display: none; }
+  nav {
+    width: 100%; }
+  .navbar {
+    width: 100%; }
+  .navbar ul {
+    width: 100%;
+    display: none;
+    /* below are defining the vertical scroll and height of the element in mobile mode */
+    max-height: 400px;
+    overflow-y: auto;
+    height: auto; }
+  .navbar ul li {
+    width: 100%; }
+  .navbar ul ul li,
+  .navbar li:hover > ul > li {
+    height: auto; }
+  .navbar ul li a,
+  .navbar ul ul li a {
+    width: 100%;
+    border-bottom: 0; }
+  .navbar > ul > li {
+    float: none; }
+  .navbar ul ul li a {
+    padding-left: 25px; }
+  .navbar ul ul ul li a {
+    padding-left: 35px; }
+  .navbar ul ul li a {
+    background: none; }
+  .navbar ul ul,
+  .navbar ul ul ul {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: left; }
+  .navbar > ul > li.has-sub > a:after,
+  .navbar > ul > li.has-sub > a:before,
+  .navbar ul ul > li.has-sub > a:after,
+  .navbar ul ul > li.has-sub > a:before {
+    display: none; }
+  .navbar #head-mobile {
+    display: block;
+    padding: 23px; }
+  .sandwitch {
+    width: 55px;
+    height: 46px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 12399994; }
+  .sandwitch:after {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    display: block;
+    height: 4px;
+    width: 20px;
+    content: '';
+    /* added to fix the bootstrap css overridding the below properties */
+    -webkit-box-sizing: initial;
+    box-sizing: initial; }
+  .sandwitch:before {
+    -webkit-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    display: block;
+    height: 2px;
+    width: 20px;
+    content: '';
+    /* added to fix the bootstrap css overridding the below properties */
+    -webkit-box-sizing: initial;
+    box-sizing: initial; }
+  .sandwitch.menu-opened:after {
+    -webkit-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    top: 23px;
+    border: 0;
+    height: 2px;
+    width: 19px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .sandwitch.menu-opened:before {
+    top: 23px;
+    width: 19px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .navbar .submenu-button {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 46px;
+    width: 46px;
+    cursor: pointer; }
+  .navbar ul ul .submenu-button {
+    height: 34px;
+    width: 34px; }
+  .navbar .submenu-button:after {
+    position: absolute;
+    top: 22px;
+    right: 19px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    content: ''; }
+  .navbar ul ul .submenu-button:after {
+    top: 15px;
+    right: 13px; }
+  .navbar .submenu-button:before {
+    position: absolute;
+    top: 19px;
+    right: 22px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    content: ''; }
+  .navbar ul ul .submenu-button:before {
+    top: 12px;
+    right: 16px; }
+  .navbar .submenu-button.submenu-opened:before {
+    display: none; }
+  .navbar ul ul ul li.active a {
+    border-left: none; }
+  .navbar > ul > li.has-sub > ul > li.active > a,
+  .navbar > ul ul > li.has-sub > ul > li.active > a {
+    border-top: none; }
+  /* added to auto adjust the width and height of the "+" symbol in mobile mode */
+  .navbar ul ul li a {
+    display: block;
+    white-space: normal; }
+  .navbar ul ul ul li a {
+    display: block;
+    white-space: normal; } }
+
+@media screen and (max-width: 719px) {
+  /*
+	 * MENU FONT CUSTOMIZATION CSS
+	 */
+  .navbar {
+    font-family: "Open Sans", Arial, sans-serif; }
+  /*****************************************************************
+	 * NAVIGATION BAR
+	 *****************************************************************/
+  /* in mobile mode, it is the background of the header (logo) */
+  .navbar #head-mobile {
+    background: white;
+    color: yellow;
+    /* logo text color */ }
+  /*****************************************************************
+	 * SANDWITCH BAR
+	 *****************************************************************/
+  /* sandwitch first bar */
+  .sandwitch:before {
+    background: #08C; }
+  /* sandwitch second and third bar */
+  .sandwitch:after {
+    border-top: 2px solid #08C;
+    border-bottom: 2px solid #08C; }
+  /* sandwitch first cross line */
+  .sandwitch.menu-opened:after {
+    background: #08C; }
+  /* sandwitch second cross line */
+  .sandwitch.menu-opened:before {
+    background: #08C; }
+  /*****************************************************************
+	 * FIRST LEVEL MENU
+	 *****************************************************************/
+  /* divider color */
+  .navbar ul ul li,
+  .navbar > ul > li {
+    border-bottom: 1px solid #CCC !important;
+    /* overwrite media large css */ }
+  /* added to avoid the duplicate border when li has submenu */
+  .navbar ul li:last-child {
+    border-bottom: 0px !important; }
+  .navbar > ul > li > a {
+    /* font settings */
+    font-family: "Open Sans", Arial, sans-serif;
+    background: white;
+    color: #08C; }
+  /* first level menu active background color */
+  .navbar ul li.active {
+    background: #08C; }
+  /* first level menu active foreground color */
+  .navbar > ul > li.active > a {
+    background: #08C;
+    color: white; }
+  /* first level menu hover background color */
+  .navbar ul li:hover {
+    background: #08C !important;
+    /* to overwrite active case */ }
+  /* first level menu hover foreground color */
+  .navbar ul li:hover > a {
+    background: #08C !important;
+    /* to overwrite active case */
+    color: white; }
+  /*****************************************************************
+	 * SUBMENU LEVEL MENU
+	 *****************************************************************/
+  /* submenu level menu customization in non-active time */
+  .navbar ul ul li a {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-decoration: none; }
+  /* background color for the second level menu in non-active time */
+  .navbar ul ul li {
+    background: white; }
+  /* foreground color for the second level menu in non-focus time */
+  .navbar ul ul li a {
+    color: #777; }
+  /* foreground color for the submenu level while active */
+  .navbar ul ul li.active > a {
+    color: yellow; }
+  /* color setting for the submenu level while hover */
+  .navbar ul ul li:hover > a {
+    background: #CCC !important;
+    /* to overwrite active case */
+    color: #777 !important;
+    /* to overwrite active case */ }
+  /*****************************************************************
+	 * SUBMENU BUTTON
+	 *****************************************************************/
+  /* divider symbol color for the menu which has submenu */
+  .navbar .submenu-button {
+    /*border-left: 1px solid red;*/ }
+  /* background color of the dropdown button after opened */
+  .navbar .submenu-button.submenu-opened {
+    /*background: chocolate;*/ }
+  /* part of the color of '+' [-] symbol for the option which has submenu */
+  .navbar .submenu-button:after {
+    background: #08C; }
+  /* part of the color of '+' [|] symbol for the option which has submenu */
+  .navbar .submenu-button:before {
+    background: #08C; }
+  /* color of '-' symbol when dropdown opens */
+  .navbar .submenu-button.submenu-opened:after {
+    background: #08C; } }
+
+/************************************************************************
+ * THEME CUSTOMIZATION
+ * **********************************************************************/
+@media screen and (min-width: 720px) {
+  /* added to change the first level menu to rounded rectangle */
+  .navbar > ul > li > a {
+    border-radius: 8px;
+    border-top: 5px solid #FFF;
+    border-bottom: 5px solid #FFF; }
+  /* extended the above to avoid radius while hover */
+  .navbar > ul > li.has-sub:hover > a {
+    border-radius: 0px; }
+  /* added to dispaly a radius line on top of the submenu */
+  .navbar ul ul ul,
+  .navbar ul ul {
+    border-top: 5px solid #0088CC; }
+  /* added to provide a gap between two li tags for the first level menu */
+  .navbar > ul > li > a {
+    margin: 0px 2px; }
+  /* added to center align the '+' symbol for the first level menu */
+  .navbar > ul > li > a {
+    padding: 12px; }
+  /* added to align the submenu position near to first level menu */
+  .navbar ul ul {
+    top: 41px;
+    min-width: 200px;
+    z-index: 9998; }
+  /*
+	 * first level menu hover
+	 * part of the color of '+' [-] symbol for the option which has submenu
+	 */
+  .navbar > ul > li.has-sub:hover > span.symbol:after {
+    background: #FFF;
+    z-index: 9999;
+    /* otherwise the li tag background color will overwrite the symbol */ }
+  /*
+	 * first level menu hover
+	 * part of the color of '+' [|] symbol for the option which has submenu
+	 */
+  .navbar > ul > li.has-sub:hover > span.symbol:before {
+    background: #FFF;
+    z-index: 9999;
+    /* otherwise the li tag background color will overwrite the symbol */ }
+  /*
+	 * first level menu active
+	 * part of the color of '+' [-] symbol for the option which has submenu
+	 */
+  .navbar > ul > li.active.has-sub > span.symbol:after {
+    background: #FFF;
+    z-index: 9999;
+    /* otherwise the li tag background color will overwrite the symbol */ }
+  /*
+	 * first level menu active
+	 * part of the color of '+' [|] symbol for the option which has submenu
+	 */
+  .navbar > ul > li.active.has-sub > span.symbol:before {
+    background: #FFF;
+    z-index: 9999;
+    /* otherwise the li tag background color will overwrite the symbol */ } }
+
+@media screen and (max-width: 719px) {
+  /* part of the color of '+' [-] symbol for the option which has submenu */
+  .navbar > ul > li.active > .submenu-button:after {
+    background: #FFF; }
+  /* part of the color of '+' [|] symbol for the option which has submenu */
+  .navbar > ul > li.active > .submenu-button:before {
+    background: #FFF; } }

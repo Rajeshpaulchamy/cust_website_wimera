@@ -1,0 +1,118 @@
+
+.headerBase {
+	width: 100%;
+	/* adjust this height based on your header size */
+	height: 78px;
+	position: fixed;
+	/* color based on your theme */
+	background: white;
+	z-index: 100;
+}
+
+/*
+ * Center align the header content
+ */
+
+/* fixed row alignment for navbar for the width starts from 826px */
+.header {
+	width: 75%;
+	position: fixed;
+	left: 50%;
+	margin-left: -37.5%;
+}
+
+/* fixed row alignment for navbar for the screen width less than 826px */
+@media screen and (max-width: 825px) {
+	.header {
+		width: 95%;
+		position: fixed;
+		left: 50%;
+		margin-left: -47%;
+	}
+}
+
+.headerFlagsContainer {
+	text-align: right;
+}
+
+.headerFlags {
+	width: 25px;
+	height: 16px;
+}
+
+.scroll-left {
+	overflow: hidden;
+	/*width: 900px;
+	height:170px;
+	overflow: hidden;
+	position: relative;
+	background: yellow;
+	color: orange;
+	border: 1px solid orange;*/
+}
+
+.scroll-left p {
+	margin-top: 5px;
+	/*background: #08c;*/
+	color: #08c;
+	/*position: absolute;
+	width: auto;
+	height: 100%;
+	font-size:150px;
+	line-height: 170px;
+	margin: 0;*/
+	text-align: center;
+	white-space:nowrap;
+	/* Starting position */
+
+	-moz-transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	/* Apply animation to this element */
+
+	-moz-animation: scroll-left 15s linear infinite;
+	-webkit-animation: scroll-left 15s linear infinite;
+	animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+
+@-moz-keyframes scroll-left {
+	0% {
+		-moz-transform: translateX(100%);
+	}
+	100% {
+		-moz-transform: translateX(-100%);
+	}
+}
+
+@-webkit-keyframes scroll-left {
+	0% {
+		-webkit-transform: translateX(100%);
+	}
+	100% {
+		-webkit-transform: translateX(-100%);
+	}
+}
+
+@keyframes scroll-left {
+	0% {
+		-moz-transform: translateX(100%);
+		/* Browser bug fix */
+
+		-webkit-transform: translateX(100%);
+		/* Browser bug fix */
+
+		transform: translateX(100%);
+	}
+	100% {
+		-moz-transform: translateX(-100%);
+		/* Browser bug fix */
+
+		-webkit-transform: translateX(-100%);
+		/* Browser bug fix */
+
+		transform: translateX(-100%);
+	}
+}
+
+

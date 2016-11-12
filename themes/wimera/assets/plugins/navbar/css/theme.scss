@@ -1,0 +1,91 @@
+
+/************************************************************************
+ * THEME CUSTOMIZATION
+ * **********************************************************************/
+@media screen and (min-width: $media-screen-size) {
+
+	/* added to change the first level menu to rounded rectangle */
+	.navbar > ul > li > a {
+		border-radius: 8px;
+		border-top: 5px solid #FFF;
+		border-bottom: 5px solid #FFF;
+	}
+
+	/* extended the above to avoid radius while hover */
+	.navbar > ul > li.has-sub:hover > a {
+		border-radius: 0px;
+	}
+
+	/* added to dispaly a radius line on top of the submenu */
+	.navbar ul ul ul,
+	.navbar ul ul {
+		border-top: 5px solid #0088CC;
+	}
+
+	/* added to provide a gap between two li tags for the first level menu */
+	.navbar > ul > li > a {
+		margin: 0px 2px;
+	}
+
+	/* added to center align the '+' symbol for the first level menu */
+	.navbar > ul > li > a {
+		padding: 12px;
+	}
+
+	/* added to align the submenu position near to first level menu */
+	.navbar ul ul {
+		top: 41px;
+		min-width: 200px;
+		z-index: 9998;
+	}
+
+	/*
+	 * first level menu hover
+	 * part of the color of '+' [-] symbol for the option which has submenu
+	 */
+	.navbar > ul > li.has-sub:hover > span.symbol:after {
+	    background: $has-submenu-symbol-hover-color;
+		z-index: 9999; /* otherwise the li tag background color will overwrite the symbol */
+	}
+
+	/*
+	 * first level menu hover
+	 * part of the color of '+' [|] symbol for the option which has submenu
+	 */
+	.navbar > ul > li.has-sub:hover > span.symbol:before {
+	    background: $has-submenu-symbol-hover-color;
+		z-index: 9999; /* otherwise the li tag background color will overwrite the symbol */
+	}
+
+	/*
+	 * first level menu active
+	 * part of the color of '+' [-] symbol for the option which has submenu
+	 */
+	.navbar > ul > li.active.has-sub > span.symbol:after {
+	    background: $has-submenu-symbol-active-color;
+		z-index: 9999; /* otherwise the li tag background color will overwrite the symbol */
+	}
+
+	/*
+	 * first level menu active
+	 * part of the color of '+' [|] symbol for the option which has submenu
+	 */
+	.navbar > ul > li.active.has-sub > span.symbol:before {
+	    background: $has-submenu-symbol-active-color;
+		z-index: 9999; /* otherwise the li tag background color will overwrite the symbol */
+	}
+
+}
+
+
+@media screen and (max-width: $media-mobile-size) {
+	/* part of the color of '+' [-] symbol for the option which has submenu */
+    .navbar > ul > li.active > .submenu-button:after {
+        background: $has-submenu-symbol-active-color;
+    }
+
+	/* part of the color of '+' [|] symbol for the option which has submenu */
+    .navbar > ul > li.active > .submenu-button:before {
+        background: $has-submenu-symbol-active-color;
+    }
+}

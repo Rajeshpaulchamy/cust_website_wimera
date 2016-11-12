@@ -1,0 +1,34 @@
+
+body{
+	background: white;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+	color: #777;
+}
+
+#bootstrap-overrides h1,
+#bootstrap-overrides h2,
+#bootstrap-overrides h3,
+#bootstrap-overrides h4,
+#bootstrap-overrides h5,
+#bootstrap-overrides h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    line-height: 1.25em;
+}
+
+a {
+	color: #444;
+}
+
+.sliderIframe {
+	width: 100%;
+	/* height will be determined by programatically */
+	/*height: 550px;*/
+}
+
+.top {
+	margin-top:	68px;
+}

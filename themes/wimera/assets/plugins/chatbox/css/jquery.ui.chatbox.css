@@ -1,0 +1,62 @@
+/* style sheets */
+.chatbox {
+    position: fixed;
+    bottom:0;
+    padding: 2px;
+    background:  #CCCCCC;
+}
+
+.chatbox-titlebar {
+    padding: 3px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.chatbox-content {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+	overflow: hidden;
+}
+
+.chatbox-log {
+    padding: 3px;
+    height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #FFFFFF;
+}
+
+.chatbox-input {
+    padding: 3px;
+    border-top: 1px solid grey;
+    overflow: hidden;
+}
+
+.chatbox-input-box {
+    margin: 5px;
+    border: 2px solid lightgrey;/* #6699FF */
+    padding: 2px;
+    height: 50px;
+}
+
+.chatbox-icon {
+    float: right;
+	padding: 0 5px;
+}
+
+.chatbox-input-focus {
+    border-color: #6699FF;
+}
+
+.chatbox-msg {
+    margin-top: 10px;
+    float: left;
+    clear: both;
+    /* Source: http://snipplr.com/view/10979/css-cross-browser-word-wrap */
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
+}

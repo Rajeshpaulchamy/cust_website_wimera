@@ -1,0 +1,81 @@
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta tags
+	________________________________________________________________________-->
+	<meta name="description" content="Wimera Website">
+	<meta name="keywords" content="Wimera">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="X-UA-Compatible" content="IE=8; IE=9" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="UTF-8">
+
+	<!-- Page title
+	________________________________________________________________________-->
+	<title> {{this.page.title}} </title>
+
+	<!-- Loading google fonts
+	________________________________________________________________________-->
+
+	<!-- import google font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Anton|Ubuntu" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Loading css files
+	________________________________________________________________________-->
+
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/bootstrap/css/bootstrap.min.css'|theme }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/animate/css/animate.css'|theme }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/navbar/css/navbar.css'|theme }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/plugins/chatbox/css/jquery.ui.chatbox.css'|theme }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/header.css'|theme }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/chatbox.css'|theme }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/team.css'|theme }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/footer.css'|theme }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/home.css'|theme }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/loading.css'|theme }}">
+
+
+	{% styles %}
+
+</head>
+
+<body id="bootstrap-overrides">
+	<!-- loading gif file -->
+	<div class="loading">
+	    <p class="loadingWelcome">Welcome to Wimera!!! </p>
+	    <p class="loadingProgress">(please wait, loading is in progress...)</p>
+	</div>
+
+	<nav>
+		{% partial "nav" %}
+	</nav>
+
+	<main>
+		{% page %}
+	</main>
+
+	{% partial "footer" %}
+
+	<!-- Loading scripts start
+	________________________________________________________________________-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script src="{{ 'assets/plugins/jquery/js/jquery.min.js'|theme }}"></script>
+	<script src="{{ 'assets/plugins/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+	<script src="{{ 'assets/plugins/wow/js/wow.min.js'|theme }}"></script>
+	<script src="{{ 'assets/plugins/navbar/js/navbar.js'|theme }}"></script>
+	<script src="{{ 'assets/js/home.js'|theme }}"></script>
+
+
+	{% framework %}
+	{% framework extras %}
+	{% scripts %}
+
+</body>
+</html>
+

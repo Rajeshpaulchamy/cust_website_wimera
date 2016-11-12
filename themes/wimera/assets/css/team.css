@@ -1,0 +1,151 @@
+#meet-team {
+	padding: 10px 0;
+}
+#meet-team .team-member {
+	padding: 13px;
+	background: #eeeeee;
+	border: 2px solid #eeeeee;
+	transition: border-color 400ms;
+	-webkit-transition: border-color 400ms;
+
+	min-height: 400px ! important;
+	max-height: 400px ! important;
+	text-align: center ! important;
+}
+#meet-team .team-member .team-img {
+	/*margin: -15px -15px 0 -15px;*/
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    border-radius:50%;
+    text-align: center ! important;
+
+    /* to center aling the image to the parent div */
+    display:block;
+    margin:auto;
+}
+
+#meet-team .team-info {
+	min-height: 113px ! important;
+}
+
+#meet-team .team-member .team-info {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #dbdbdb;
+	margin-bottom: 10px;
+}
+#meet-team .team-member:hover {
+	border-color: #45aed6;
+}
+#meet-team .team-member:hover .social-icons > li > a {
+	background: #45aed6;
+}
+#meet-team .social-icons {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#meet-team .social-icons > li {
+	display: inline-block;
+}
+#meet-team .social-icons > li > a {
+	display: block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	color: #fff;
+	background: #222534;
+	border-radius: 3px;
+}
+.divider {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-image: -moz-linear-gradient(180deg, #ffffff 0%, #e3e3e3 49%, #ffffff 100%);
+	background-image: -webkit-linear-gradient(180deg, #ffffff 0%, #e3e3e3 49%, #ffffff 100%);
+	background-image: -ms-linear-gradient(180deg, #ffffff 0%, #e3e3e3 49%, #ffffff 100%);
+	width: 95%;
+	height: 1px;
+}
+.progress {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: #eeeeee;
+}
+.progress .progress-bar.progress-bar-primary {
+	background-image: -moz-linear-gradient(4deg, #2caab3 0%, #2c8cb3 100%);
+	background-image: -webkit-linear-gradient(4deg, #2caab3 0%, #2c8cb3 100%);
+	background-image: -ms-linear-gradient(4deg, #2caab3 0%, #2c8cb3 100%);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.nav.main-tab {
+	background: #eee;
+	border-bottom: 3px solid #222534;
+	border-radius: 3px 3px 0 0;
+}
+.nav.main-tab > li > a {
+	color: #272727;
+}
+.nav.main-tab > li.active > a {
+	background: #222534;
+	color: #45aed6;
+}
+.nav.main-tab > li:first-child > a {
+	border-radius: 3px 0 0 0;
+}
+.nav.main-tab > li:last-child > a {
+	border-radius: 0 3px 0 0;
+}
+.tab-content {
+	border: 1px solid #eee;
+	border-top: 0;
+	padding: 20px 20px 10px;
+	border-radius: 0 0 3px 3px;
+}
+.panel-default {
+	border-color: #eee;
+}
+.panel-default > .panel-heading {
+	background-color: #fff;
+	border-color: #eee;
+}
+.panel-default > .panel-heading .panel-title {
+	font-size: 14px;
+	font-weight: normal;
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+	border-top-color: #eee;
+}
+#animated-number {
+	padding: 100px 0 70px;
+	background: #132125 url(../images/animated-number/bg.jpg) no-repeat 0 0;
+	background-size: cover;
+	color: #fff;
+}
+#animated-number h1,
+#animated-number h2,
+#animated-number h3,
+#animated-number h4 {
+	color: #fff;
+}
+#animated-number strong {
+	display: block;
+	margin-bottom: 30px;
+}
+.animated-number {
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	font-size: 24px;
+	line-height: 140px;
+	border: 3px solid #fff;
+	border-radius: 100px;
+	margin-bottom: 20px;
+}
+
+/* commented it is overriding the default bootstrap settings */
+/*.fa {
+	line-height: 2 ! important;
+}*/

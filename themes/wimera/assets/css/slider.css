@@ -1,0 +1,38 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    line-height: 1.25em;
+}
+
+#slider1 .sliderHeading {
+	font: 72px/1 Anton, sans-serif;
+}
+
+#slider1 .sliderPara {
+	font: 32px/1 Ubuntu, sans-serif;
+}
+
+#slider01 > h3 {
+	position: absolute;
+    top: 130px;
+    left: 837px;
+	color: #FFF;
+}
+#slider01 > p {
+	position: absolute;
+    top: 331px;
+    left: 837px;
+	color: #FFF;
+}
+
+.player {
+    height: 120% !important;
+    top: -20%;
+}
+
+

@@ -1,0 +1,81 @@
+/*
+ * CONFIGURABLE VARIABLES
+ */
+
+$media-mobile-size: 719px;
+$media-screen-size: 720px;
+
+/*
+ * MOBILE MODE
+ */
+
+/* SANDWITCH BAR */
+$sandwitch-bar-color: #08C;
+
+/* FIRST LEVEL MENU */
+$first-level-divider-color: #CCC;
+
+/* SECOND LEVEL MENU */
+$submenu-active-background-color: chocolate;
+$submenu-active-foreground-color: yellow;
+
+/*
+ * SCREEN MODE
+ */
+
+/* FONT SETTINGS */
+$first-level-font-name: "Open Sans", Arial, sans-serif;
+$first-level-font-size: 12px;
+$first-level-font-weight: bold;
+$first-level-font-letter-spacing: normal;
+
+$submenu-level-font-name: "Open Sans", Arial, sans-serif;
+$submenu-level-font-size: 13px;
+$submenu-level-font-weight: 400;
+$submenu-level-font-letter-spacing: normal;
+
+
+/* NAVBAR */
+$navbar-background: white;
+
+/* FIRST LEVEL MENU */
+$first-level-non-active-background-color: white;
+$first-level-non-active-foreground-color: #08C;
+$first-level-active-background-color: #08C;
+$first-level-active-foreground-color: white;
+$first-level-hover-background-color: #08C;
+$first-level-hover-foreground-color: white;
+
+/* SECOND LEVEL MENU */
+$submenu-non-active-background-color: white;
+$submenu-non-active-foreground-color: #777;
+$submenu-hover-background-color: #CCC;
+$submenu-hover-foreground-color: #777;
+$submenu-divider-color: #CCC;
+
+/* HAS SUBMENU SYMBOL */
+$has-submenu-symbol-color: #08C;
+$has-submenu-symbol-hover-color: #FFF;
+$has-submenu-symbol-active-color: #FFF;
+
+
+/*
+ * NAVBAR CUSTOMIZATION CSS
+ */
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    position: relative;
+    /*width: 980px;*/
+    margin: 0 auto;
+}
+
+@import 'logo';
+@import 'mediaLarge';
+@import 'mediaSmall';
+@import 'theme';
+

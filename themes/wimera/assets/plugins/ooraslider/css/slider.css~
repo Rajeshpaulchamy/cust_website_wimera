@@ -1,0 +1,97 @@
+.videoInsert {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	/* z-index: -100; */
+	background-size: cover;
+	overflow: hidden;
+	top: -92px;
+}
+
+.oora-slide-wrap {
+	position: relative;
+	display: block;
+	height: 500px;
+    top: 82px;
+}
+.oora-slide-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+.oora-slide-item {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transform: translate3d(0, 0, 0);
+}
+.oora-slide-item > a {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.oora-slide-item img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+}
+.oora-slide-indicator {
+	position: absolute;
+	bottom: 0.5rem;
+	left: 0;
+	z-index: 10;
+}
+.oora-slide-indicator .oora-slide-dot {
+	display: block;
+	float: left;
+	width: 1rem;
+	height: 1rem;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+	border-radius: 50%;
+	background-color: #fff;
+	cursor: pointer;
+}
+.oora-slide-indicator .oora-slide-dot.active {
+	background-color: #099fde;
+}
+
+.oora-slide-arrow-left, .oora-slide-arrow-right {
+	display: block;
+	position: absolute;
+	/* size of arrow element */
+	width: 40px;
+	height: 58px;
+	cursor: pointer;
+	background: url('../images/a22.png') center center no-repeat;
+	overflow: hidden;
+}
+
+.oora-slide-arrow-left { background-position: -10px -31px; }
+.oora-slide-arrow-right { background-position: -70px -31px; }
+.oora-slide-arrow-left:hover { background-position: -130px -31px; }
+.oora-slide-arrow-right:hover { background-position: -190px -31px; }
+.oora-slide-arrow-left.oora-slide-arrow-leftdn { background-position: -250px -31px; }
+.oora-slide-arrow-right.oora-slide-arrow-rightdn { background-position: -310px -31px; }
+.oora-slide-arrow-left.oora-slide-arrow-leftds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
+.oora-slide-arrow-right.oora-slide-arrow-rightds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
