@@ -154,7 +154,7 @@ jQuery(function($) {
 				startLoad();
 			}
 
-		}, 100);
+		}, 5000);
 	}
 
 

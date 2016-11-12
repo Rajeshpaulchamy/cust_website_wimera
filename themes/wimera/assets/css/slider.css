@@ -9,25 +9,85 @@ h6 {
     line-height: 1.25em;
 }
 
+.bannerImg {
+	width: 100%;
+	height: 100%;
+}
+
+.bannerHeading {
+	font: 102px/1 Anton, sans-serif ! important;
+	font-size: 102px ! important;    /* old */
+	font-size: 10.2vm ! important;   /* IE9 */
+	font-size: 10.2vmin ! important;
+	width: 35% ! important;
+	position: absolute;
+    top: 80px;
+    right: 10px;
+}
+
+.bannerPara {
+	font: 50px/1 Ubuntu, sans-serif ! important;
+	font-size: 50px ! important;    /* old */
+	font-size: 5.2vm ! important;   /* IE9 */
+	font-size: 5.2vmin ! important;
+	width: 35% ! important;
+	position: absolute;
+    top: 100px;
+    right: 10px;
+}
+
 #slider1 .sliderHeading {
-	font: 72px/1 Anton, sans-serif;
+	font: 102px/1 Anton, sans-serif;
+	font-size: 102px;    /* old */
+	font-size: 10.2vm;   /* IE9 */
+	font-size: 10.2vmin;
+	width: 35%;
 }
 
 #slider1 .sliderPara {
-	font: 32px/1 Ubuntu, sans-serif;
+	font: 50px/1 Ubuntu, sans-serif;
+	font-size: 50px;    /* old */
+	font-size: 5.2vm;   /* IE9 */
+	font-size: 5.2vmin;
+	width: 35%;
 }
 
 #slider01 > h3 {
 	position: absolute;
-    top: 130px;
-    left: 837px;
+    top: 100px;
+	right: 10px;
 	color: #FFF;
 }
 #slider01 > p {
 	position: absolute;
-    top: 331px;
-    left: 837px;
+    top: 300px;
+	right: 10px;
 	color: #FFF;
+}
+
+@media screen and (max-width: 825px) {
+	#slider01 > p {
+		position: absolute;
+	    top: 250px;
+		right: 10px;
+		color: #FFF;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#slider01 > h3 {
+		position: absolute;
+	    top: 50px;
+		right: 10px;
+		color: #FFF;
+	}
+
+	#slider01 > p {
+		position: absolute;
+	    top: 120px;
+		right: 10px;
+		color: #FFF;
+	}
 }
 
 .player {
