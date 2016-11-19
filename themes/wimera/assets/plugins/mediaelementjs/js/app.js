@@ -73,7 +73,7 @@ jQuery(function($) {
 				duration: 1,
 				callback: onCallback
 			});
-	}, 2000);
+	}, 5000);
 
 	var onSliderResize = function() {
 		var maxWidth = 1024;

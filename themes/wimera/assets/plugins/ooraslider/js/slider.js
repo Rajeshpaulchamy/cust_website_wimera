@@ -189,7 +189,7 @@ Slider.prototype.showDots = function() {
 			wrapperLeft = (slider.width - wrapperWidth) / 2 + 'px';
 			
 		$wrapper.css("left", wrapperLeft);
-	}, 0);
+	}, 500);
 
 };
 
